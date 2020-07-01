@@ -1,0 +1,64 @@
+<!--
+  Generated template for the PerfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.nome" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nova Senha</ion-label>
+      <ion-input autocomplete="off" type="password" [(ngModel)]="usuario.senha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Confirmar Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="usuario.confirmar_senha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Gênero</ion-label>
+      <ion-select [(ngModel)]="usuario.genero">
+        <ion-option>Selecione um genero</ion-option>
+        <ion-option value="1">Masculino</ion-option>
+        <ion-option value="2">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>CPF</ion-label>
+      <ion-input type="text" [(ngModel)]="usuario.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Data de Nascimento</ion-label>
+      <ion-input type="date" [(ngModel)]="usuario.data_nascimento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button full (click)="atualizarUsuario();">Atualizar</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
