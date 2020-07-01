@@ -1,0 +1,60 @@
+<!--
+  Generated template for the CadastroUsuarioPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="novoUsuario.nome" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="novoUsuario.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="novoUsuario.senha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Confirmar Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="novoUsuario.confirmar_senha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Gênero</ion-label>
+      <ion-select [(ngModel)]="novoUsuario.genero">
+        <ion-option>Selecione um genero</ion-option>
+        <ion-option value="1">Masculino</ion-option>
+        <ion-option value="2">Feminino</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>CPF</ion-label>
+      <ion-input type="text" [(ngModel)]="novoUsuario.cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Data de Nascimento</ion-label>
+      <ion-input type="date" [(ngModel)]="novoUsuario.data_nascimento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button full (click)="salvarUsuario();">Cadastrar</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
